@@ -1,0 +1,24 @@
+@(api: String, accountLinkingToken: String, redirectURI: String, successURI: String)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  <form action="@api" method="post">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+    </div>
+    <input type="hidden" name="accountLinkingToken" value="@accountLinkingToken">
+    <input type="hidden" name="redirectURI" value="@redirectURI">
+    <input type="hidden" name="successURI" value="@successURI">
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>
